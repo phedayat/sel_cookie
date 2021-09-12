@@ -8,7 +8,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 class CookieClicker():
     def __init__(self):
-        self.driver = webdriver.Chrome("/Users/phedayat/Desktop/sel_cookie/chromedriver")
+        self.driver = webdriver.Chrome("./chromedriver")
         self.driver.get("https://orteil.dashnet.org/cookieclicker/")
         cookie_wait = WebDriverWait(self.driver, 15).until(EC.visibility_of_element_located((By.ID, "bigCookie")))
         
@@ -33,15 +33,12 @@ class CookieClicker():
         self.scheduler.pause_job('upgrade_click')
         for i in range(n):
             self.cookie.click()
-            self.cookie.click()
-            self.cookie.click()
             sleep(.0005)
         self.scheduler.resume_job('product_click')
         self.scheduler.resume_job('upgrade_click')
 
     def get_cookie_count(self):
-        x = int(float(self.driver.find_element_by_xpath("//*[@id='cookies']").text.split(" ")[0]))
-        return x
+        return int(float(self.driver.find_element_by_xpath("//*[@id='cookies']").text.split(" ")[0]))
 
     def product_click(self):
         xpath = "//*[@id='products']/*[@class='product unlocked enabled']"
@@ -49,15 +46,9 @@ class CookieClicker():
         products.reverse()
         for p in products:
             try:
-                pt = p.text.split(" ")
-                if pt[1] <= self.get_cookie_count():
-                    p.click()
+                p.click()
             except:
-                print("Exception occurred (products)")
-            # pl = p.text.split("\n")
-            # buy_count = math.floor(self.get_cookie_count() / int(pl[1]))
-            # for i in range(buy_count):
-            #     p.click()
+                print("Not enough cookies")
 
     def upgrade_click(self):
         xpath = "//*[@id='upgrades']/*[@class='crate upgrade enabled']"
