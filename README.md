@@ -16,6 +16,7 @@ A simple bot that plays cookie clicker for you.
 
 ## Notes
  * Each execution of rapid clicks halts all other processes. Please wait until it finishes completely
+ * Make sure to disable Vimium if running through the Repl
 
 ## Stack
  * Python
