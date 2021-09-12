@@ -14,6 +14,9 @@ A simple bot that plays cookie clicker for you.
   4. Run `./run.sh`
   5. Enjoy!
 
+## Notes
+ * Each execution of rapid clicks halts all other processes. Please wait until it finishes completely
+
 ## Stack
  * Python
     * Selenium
