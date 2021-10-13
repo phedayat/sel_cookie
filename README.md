@@ -27,4 +27,4 @@ A simple bot that plays cookie clicker for you.
  * Bash
 
 ## In the future
- * Dockerize this little bot
+ * Dockerize this little bot (mostly for acquiring the chromedriver)
