@@ -26,3 +26,5 @@ A simple bot that plays cookie clicker for you.
     * tkinter
  * Bash
 
+## In the future
+ * Dockerize this little bot
