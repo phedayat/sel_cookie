@@ -26,5 +26,6 @@ A simple bot that plays cookie clicker for you.
  * Python
     * Selenium
     * APscheduler
+    * tkinter
  * Bash
 
