@@ -5,7 +5,7 @@ A simple bot that plays cookie clicker for you.
 ## Features
  * Purchases upgrades and products for you, at a regular interval
  * Includes a GUI that allows you to tell the bot to rapid click _n_ number of times
- * Runs in its own instance of Chrome
+ * Runs in its own instance of Chrome (depends on the system version of Chrome. An updated driver will most likely be needed)
 
 ## How to use
   1. Download the zip containing the project
